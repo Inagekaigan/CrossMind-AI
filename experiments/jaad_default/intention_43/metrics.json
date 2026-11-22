@@ -1,0 +1,147 @@
+{
+  "status": "JAAD annotated at-risk cohort pilot; not the published benchmark protocol",
+  "task": "intention",
+  "seed": 43,
+  "epochs": 12,
+  "device": "cpu",
+  "seconds_this_run": 0.9430548000091221,
+  "torch": "2.15.0+cpu",
+  "hashes": {
+    "train": "2b32653797de890abd6e54e120bcc2474f9fc4bf48955f9bf919da90742ff794",
+    "validation": "148223e303b1b6c1cfd582288e5906e18daee9c0aba4e308b580f94783cacc32",
+    "test": "08e453822f9185dfc211d71bfb673c58f7d37f84f17942814007fb7a8f06104e"
+  },
+  "checkpoint_sha256": "7ab822324b50ae199b54eb3f6778d02afcf2bf282647e1e7c71c8bef40ac6c5a",
+  "source_hashes": {
+    "classification.py": "5c322f14b97dd7517e3cb87f7544eebec242bbcd576fccfb6d26305499449a26",
+    "cli.py": "4f7eb4f433153a4a218021fccddf884666a989a623e41446ae3c53a4e82bc04a",
+    "data.py": "8d985e76bcf8d2491cbb400c34abba202e2a51264e6ab3f1a6f1d2303dc6ec6e",
+    "inference.py": "7406821b28e89256ddf4843f56f18b7b73a12f9516825a25499898c8dfab83f6",
+    "jaad.py": "06eea9847bfee067807c918aa7399eba3545360fd753949cc8c5f09f4f495ccb",
+    "labels.py": "fba2542dad1a8512e16af8f45e5246f0c117186c3af634942be46987941ddfc3",
+    "metrics.py": "eeb9764acd03a89d02d78ad603df8b79c8ae7e74cdc9f98a1bdbf8a92a26c808",
+    "models.py": "28bf1b90e162ecb8ae51689cce4b38b8210501b96411c273d2b615c019d9ee02",
+    "train.py": "d48ae3bf7d592e36017d878e86b64285a39172f5d213777da8a110589cbefdcd",
+    "trajectory.py": "5255c090e6b4c66477db27c38af66150823f5b41b28da4cd20ffda84ae2444f8",
+    "video.py": "c719c0dbcce1dc65d6a5d53f152c7d800f09cba554d4d8c40ca63c45126b56b7",
+    "__init__.py": "8757eb07fb2c287c0a318fba8124e5a4081ddd3061fb9245942ebc625e797bd9"
+  },
+  "training_settings": {
+    "optimizer": "AdamW",
+    "initial_lr": 0.003,
+    "weight_decay": 0.0001,
+    "batch_size": 32,
+    "gradient_clip": 5.0,
+    "patience": 8,
+    "max_epochs": 30,
+    "class_weighting": "none; natural prevalence",
+    "trajectory_loss": "whole-trajectory NLL / (2 * future_steps)",
+    "joint_loss_weights": [
+      1,
+      1
+    ],
+    "deterministic": true
+  },
+  "data_config": {
+    "source_fps": 30,
+    "sample_step": 3,
+    "observation_seconds": 1,
+    "prediction_seconds": 2,
+    "intention_seconds": 2,
+    "stride_samples": 5,
+    "neighbor_radius": 0.2,
+    "features": [
+      "position",
+      "velocity",
+      "interaction"
+    ]
+  },
+  "counts": {
+    "train": {
+      "windows": 703,
+      "positive": 295,
+      "negative": 408,
+      "excluded_windows": 5415,
+      "clips": 177,
+      "tracks": 154
+    },
+    "validation": {
+      "windows": 149,
+      "positive": 47,
+      "negative": 102,
+      "excluded_windows": 879,
+      "clips": 29,
+      "tracks": 24
+    },
+    "test": {
+      "windows": 562,
+      "positive": 201,
+      "negative": 361,
+      "excluded_windows": 4372,
+      "clips": 117,
+      "tracks": 135
+    }
+  },
+  "validation": {
+    "loss": 0.4708089530467987,
+    "count": 149,
+    "units": "normalized_image",
+    "miss_threshold": 0.1,
+    "intention": {
+      "accuracy": 0.738255033557047,
+      "precision": 0.5588235294117647,
+      "recall": 0.8085106382978723,
+      "f1": 0.6608695652173913,
+      "roc_auc": 0.8220692532332081,
+      "average_precision": 0.6151329266953388,
+      "undefined_reason": null,
+      "brier": 0.16303053498268127,
+      "ece_10_bins": 0.1387873820760506,
+      "confusion_matrix": [
+        [
+          72,
+          30
+        ],
+        [
+          9,
+          38
+        ]
+      ],
+      "count": 149,
+      "positive": 47,
+      "threshold": 0.5,
+      "zero_division_policy": "precision/recall/F1 return 0 when denominator is zero"
+    }
+  },
+  "test": {
+    "loss": 0.6487607359886169,
+    "count": 562,
+    "units": "normalized_image",
+    "miss_threshold": 0.1,
+    "intention": {
+      "accuracy": 0.5907473309608541,
+      "precision": 0.4536741214057508,
+      "recall": 0.7064676616915423,
+      "f1": 0.5525291828793775,
+      "roc_auc": 0.7030085031904192,
+      "average_precision": 0.590772204246121,
+      "undefined_reason": null,
+      "brier": 0.22700989246368408,
+      "ece_10_bins": 0.15720142286231087,
+      "confusion_matrix": [
+        [
+          190,
+          171
+        ],
+        [
+          59,
+          142
+        ]
+      ],
+      "count": 562,
+      "positive": 201,
+      "threshold": 0.5,
+      "zero_division_policy": "precision/recall/F1 return 0 when denominator is zero"
+    }
+  }
+}

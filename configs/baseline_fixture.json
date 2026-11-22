@@ -1,0 +1,12 @@
+{
+  "method": "constant_velocity",
+  "sampling_hz": 2,
+  "observation_seconds": 1,
+  "prediction_seconds": 2,
+  "stride_samples": 1,
+  "max_gap_seconds": 0.5,
+  "miss_threshold": 2,
+  "units": "meters",
+  "split": "test",
+  "provenance": "synthetic_fixture"
+}

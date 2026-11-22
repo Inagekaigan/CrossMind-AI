@@ -1,0 +1,46 @@
+{
+  "status": "same-cohort JAAD pilot",
+  "prior": {
+    "accuracy": 0.6423487544483986,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "roc_auc": 0.5,
+    "average_precision": 0.35765124555160144,
+    "undefined_reason": null,
+    "brier": 0.23357823491096497,
+    "ece_10_bins": 0.06197887659072876,
+    "confusion_matrix": [
+      [
+        361,
+        0
+      ],
+      [
+        201,
+        0
+      ]
+    ],
+    "count": 562,
+    "positive": 201,
+    "threshold": 0.5,
+    "zero_division_policy": "precision/recall/F1 return 0 when denominator is zero"
+  },
+  "units": "normalized_image",
+  "miss_threshold": 0.1,
+  "stationary": {
+    "ADE_mode0": 0.06381590265889388,
+    "FDE_mode0": 0.12918120021948987,
+    "minADE": 0.06381590265889388,
+    "minFDE": 0.12918120021948987,
+    "miss": 0.498220640569395,
+    "K": 1.0
+  },
+  "constant_velocity": {
+    "ADE_mode0": 0.04817268087206734,
+    "FDE_mode0": 0.11270025250182017,
+    "minADE": 0.04817268087206734,
+    "minFDE": 0.11270025250182017,
+    "miss": 0.40213523131672596,
+    "K": 1.0
+  }
+}

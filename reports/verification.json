@@ -1,0 +1,11 @@
+{
+  "updated": "2026-11-22",
+  "full_suite": {
+    "passed": 38,
+    "seconds": 10.62,
+    "warnings": "38 upstream Streamlit/Pandas deprecation warnings"
+  },
+  "checkpoint_audit": "model_audit.json",
+  "security_policy_modified": false,
+  "video_evidence": "Prior measured 150-frame run; not rerun in this audit"
+}

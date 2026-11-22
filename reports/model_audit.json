@@ -1,0 +1,101 @@
+{
+  "date": "2026-11-22",
+  "runs": [
+    {
+      "run": "position_17",
+      "checkpoint_sha256": "d13760dba06ba924e8e9f49f6a418cb9a15f46b721f9676feee9d15b7df64f7d",
+      "scores_match": true,
+      "training_only_normalization": true
+    },
+    {
+      "run": "position_29",
+      "checkpoint_sha256": "15de018097069d70edf70c14ab8c1654e092d783bc3a6ada7c4bb76286f3cc24",
+      "scores_match": true,
+      "training_only_normalization": true
+    },
+    {
+      "run": "position_43",
+      "checkpoint_sha256": "55dbdd74a7147d0330b111627dc9e371ccd73eee131349c8d1ab44effb30594e",
+      "scores_match": true,
+      "training_only_normalization": true
+    },
+    {
+      "run": "position_velocity_17",
+      "checkpoint_sha256": "2b59acee80d9060052047741bea483e053b49a118952cdc0221675f9d3c107cd",
+      "scores_match": true,
+      "training_only_normalization": true
+    },
+    {
+      "run": "position_velocity_29",
+      "checkpoint_sha256": "329c802d0a92d621516990ad43c0aa91f482da7c6cf6e92aec4cd3eb4ed8b1d7",
+      "scores_match": true,
+      "training_only_normalization": true
+    },
+    {
+      "run": "position_velocity_43",
+      "checkpoint_sha256": "29878cc768d2b1f9b5c9d89518e443208d887b4d5a2bf069f8ee5b2c98f0a615",
+      "scores_match": true,
+      "training_only_normalization": true
+    },
+    {
+      "run": "intention_17",
+      "checkpoint_sha256": "3ae9c30b822b211980955670dd0cae4d1a489337f30d66d717274b480c70c294",
+      "scores_match": true,
+      "training_only_normalization": true
+    },
+    {
+      "run": "intention_29",
+      "checkpoint_sha256": "f07759348d53fad0a4b6703dc46bd7f42cc55b322fef5b1cd2c6dc4f84e1c620",
+      "scores_match": true,
+      "training_only_normalization": true
+    },
+    {
+      "run": "intention_43",
+      "checkpoint_sha256": "7ab822324b50ae199b54eb3f6778d02afcf2bf282647e1e7c71c8bef40ac6c5a",
+      "scores_match": true,
+      "training_only_normalization": true
+    },
+    {
+      "run": "joint_17",
+      "checkpoint_sha256": "0cc16846692883881aa347f3482ac493ef6c356103d29eb3c06824eaeaf88a88",
+      "scores_match": true,
+      "training_only_normalization": true
+    },
+    {
+      "run": "joint_29",
+      "checkpoint_sha256": "e7786f84dfb6546ea956ad269407fb966524b08afc8f41eda32ef36a4d49baa9",
+      "scores_match": true,
+      "training_only_normalization": true
+    },
+    {
+      "run": "joint_43",
+      "checkpoint_sha256": "a04905488e067413fe214a1c49cc4e0fe08d0f5286d5d5aaf9442279367cedd5",
+      "scores_match": true,
+      "training_only_normalization": true
+    },
+    {
+      "run": "trajectory_17",
+      "checkpoint_sha256": "483d6fdcd6d90432684643e324f174d667cb7c5597882ed311eccc337a14255c",
+      "scores_match": true,
+      "training_only_normalization": true
+    },
+    {
+      "run": "trajectory_29",
+      "checkpoint_sha256": "65ec6a738d7a15213ea93988dadbfa9dae0ac19e3870f888551bb751058f45e1",
+      "scores_match": true,
+      "training_only_normalization": true
+    },
+    {
+      "run": "trajectory_43",
+      "checkpoint_sha256": "4e379df74dc2f17af70fdda85c1a609e81004293074ca57a52bca366fa8864e1",
+      "scores_match": true,
+      "training_only_normalization": true
+    }
+  ],
+  "baselines_match": true,
+  "tolerance": {
+    "rtol": 1e-05,
+    "atol": 1e-06
+  },
+  "scope": "Saved validation/test scores, checkpoint and input hashes, training-only normalization; not external validation"
+}

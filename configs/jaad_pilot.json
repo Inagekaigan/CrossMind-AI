@@ -1,0 +1,10 @@
+{
+  "source_fps": 30,
+  "sample_step": 3,
+  "observation_seconds": 1,
+  "prediction_seconds": 2,
+  "intention_seconds": 2,
+  "stride_samples": 5,
+  "neighbor_radius": 0.2,
+  "features": ["position", "velocity", "interaction"]
+}

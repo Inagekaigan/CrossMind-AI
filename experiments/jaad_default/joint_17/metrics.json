@@ -1,0 +1,165 @@
+{
+  "status": "JAAD annotated at-risk cohort pilot; not the published benchmark protocol",
+  "task": "joint",
+  "seed": 17,
+  "epochs": 20,
+  "device": "cpu",
+  "seconds_this_run": 2.2065637999912724,
+  "torch": "2.15.0+cpu",
+  "hashes": {
+    "train": "2b32653797de890abd6e54e120bcc2474f9fc4bf48955f9bf919da90742ff794",
+    "validation": "148223e303b1b6c1cfd582288e5906e18daee9c0aba4e308b580f94783cacc32",
+    "test": "08e453822f9185dfc211d71bfb673c58f7d37f84f17942814007fb7a8f06104e"
+  },
+  "checkpoint_sha256": "0cc16846692883881aa347f3482ac493ef6c356103d29eb3c06824eaeaf88a88",
+  "source_hashes": {
+    "classification.py": "5c322f14b97dd7517e3cb87f7544eebec242bbcd576fccfb6d26305499449a26",
+    "cli.py": "4f7eb4f433153a4a218021fccddf884666a989a623e41446ae3c53a4e82bc04a",
+    "data.py": "8d985e76bcf8d2491cbb400c34abba202e2a51264e6ab3f1a6f1d2303dc6ec6e",
+    "inference.py": "7406821b28e89256ddf4843f56f18b7b73a12f9516825a25499898c8dfab83f6",
+    "jaad.py": "06eea9847bfee067807c918aa7399eba3545360fd753949cc8c5f09f4f495ccb",
+    "labels.py": "fba2542dad1a8512e16af8f45e5246f0c117186c3af634942be46987941ddfc3",
+    "metrics.py": "eeb9764acd03a89d02d78ad603df8b79c8ae7e74cdc9f98a1bdbf8a92a26c808",
+    "models.py": "28bf1b90e162ecb8ae51689cce4b38b8210501b96411c273d2b615c019d9ee02",
+    "train.py": "d48ae3bf7d592e36017d878e86b64285a39172f5d213777da8a110589cbefdcd",
+    "trajectory.py": "5255c090e6b4c66477db27c38af66150823f5b41b28da4cd20ffda84ae2444f8",
+    "video.py": "c719c0dbcce1dc65d6a5d53f152c7d800f09cba554d4d8c40ca63c45126b56b7",
+    "__init__.py": "8757eb07fb2c287c0a318fba8124e5a4081ddd3061fb9245942ebc625e797bd9"
+  },
+  "training_settings": {
+    "optimizer": "AdamW",
+    "initial_lr": 0.003,
+    "weight_decay": 0.0001,
+    "batch_size": 32,
+    "gradient_clip": 5.0,
+    "patience": 8,
+    "max_epochs": 30,
+    "class_weighting": "none; natural prevalence",
+    "trajectory_loss": "whole-trajectory NLL / (2 * future_steps)",
+    "joint_loss_weights": [
+      1,
+      1
+    ],
+    "deterministic": true
+  },
+  "data_config": {
+    "source_fps": 30,
+    "sample_step": 3,
+    "observation_seconds": 1,
+    "prediction_seconds": 2,
+    "intention_seconds": 2,
+    "stride_samples": 5,
+    "neighbor_radius": 0.2,
+    "features": [
+      "position",
+      "velocity",
+      "interaction"
+    ]
+  },
+  "counts": {
+    "train": {
+      "windows": 703,
+      "positive": 295,
+      "negative": 408,
+      "excluded_windows": 5415,
+      "clips": 177,
+      "tracks": 154
+    },
+    "validation": {
+      "windows": 149,
+      "positive": 47,
+      "negative": 102,
+      "excluded_windows": 879,
+      "clips": 29,
+      "tracks": 24
+    },
+    "test": {
+      "windows": 562,
+      "positive": 201,
+      "negative": 361,
+      "excluded_windows": 4372,
+      "clips": 117,
+      "tracks": 135
+    }
+  },
+  "validation": {
+    "loss": -2.274405002593994,
+    "count": 149,
+    "units": "normalized_image",
+    "miss_threshold": 0.1,
+    "intention": {
+      "accuracy": 0.7248322147651006,
+      "precision": 0.55,
+      "recall": 0.7021276595744681,
+      "f1": 0.616822429906542,
+      "roc_auc": 0.8220692532332081,
+      "average_precision": 0.6592916468485613,
+      "undefined_reason": null,
+      "brier": 0.16676780581474304,
+      "ece_10_bins": 0.10249899492767835,
+      "confusion_matrix": [
+        [
+          75,
+          27
+        ],
+        [
+          14,
+          33
+        ]
+      ],
+      "count": 149,
+      "positive": 47,
+      "threshold": 0.5,
+      "zero_division_policy": "precision/recall/F1 return 0 when denominator is zero"
+    },
+    "trajectory": {
+      "ADE_mode0": 0.04031663152396993,
+      "FDE_mode0": 0.09377726738575735,
+      "minADE": 0.023494972878109237,
+      "minFDE": 0.0465060900075521,
+      "miss": 0.06040268456375839,
+      "K": 3.0,
+      "whole_trajectory_nll": -110.16220092773438
+    }
+  },
+  "test": {
+    "loss": -2.093346118927002,
+    "count": 562,
+    "units": "normalized_image",
+    "miss_threshold": 0.1,
+    "intention": {
+      "accuracy": 0.6281138790035588,
+      "precision": 0.4863013698630137,
+      "recall": 0.7064676616915423,
+      "f1": 0.5760649087221096,
+      "roc_auc": 0.7022229572359808,
+      "average_precision": 0.5607412232618669,
+      "undefined_reason": null,
+      "brier": 0.22078882157802582,
+      "ece_10_bins": 0.12243993157434718,
+      "confusion_matrix": [
+        [
+          211,
+          150
+        ],
+        [
+          59,
+          142
+        ]
+      ],
+      "count": 562,
+      "positive": 201,
+      "threshold": 0.5,
+      "zero_division_policy": "precision/recall/F1 return 0 when denominator is zero"
+    },
+    "trajectory": {
+      "ADE_mode0": 0.04131122293206037,
+      "FDE_mode0": 0.09524564544536297,
+      "minADE": 0.02488258273573943,
+      "minFDE": 0.051493189750179316,
+      "miss": 0.09074733096085409,
+      "K": 3.0,
+      "whole_trajectory_nll": -109.02933502197266
+    }
+  }
+}

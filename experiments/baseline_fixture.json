@@ -1,0 +1,53 @@
+{
+  "status": "synthetic verification only",
+  "config": {
+    "method": "constant_velocity",
+    "sampling_hz": 2,
+    "observation_seconds": 1,
+    "prediction_seconds": 2,
+    "stride_samples": 1,
+    "max_gap_seconds": 0.5,
+    "miss_threshold": 2,
+    "units": "meters",
+    "split": "test",
+    "provenance": "synthetic_fixture"
+  },
+  "window_count": 2,
+  "skipped_gap_windows": 0,
+  "metrics": {
+    "ADE_mode0": 0.625,
+    "FDE_mode0": 1.0,
+    "minADE": 0.625,
+    "minFDE": 1.0,
+    "miss": 0.0,
+    "K": 1.0
+  },
+  "per_window": [
+    {
+      "scene": "synthetic_linear",
+      "track": "1",
+      "anchor": 1.0,
+      "ADE_mode0": 0.0,
+      "FDE_mode0": 0.0,
+      "minADE": 0.0,
+      "minFDE": 0.0,
+      "miss": 0.0,
+      "K": 1
+    },
+    {
+      "scene": "synthetic_stop",
+      "track": "2",
+      "anchor": 1.0,
+      "ADE_mode0": 1.25,
+      "FDE_mode0": 2.0,
+      "minADE": 1.25,
+      "minFDE": 2.0,
+      "miss": 0.0,
+      "K": 1
+    }
+  ],
+  "python": "3.13.9",
+  "numpy": "2.3.5",
+  "input_sha256": "97be28066dfa33918d67c2c5314b34281439c20ffec98b92be7104582fb7b5b1",
+  "split_sha256": "1e74b199d170b4f8c3b41aacaa5f5606c89ba3e226b11e2bc6e98ea0a71e8300"
+}
